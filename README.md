@@ -1,17 +1,45 @@
-# **Remindah**  💻 😎
+# **Remindah** 💻 😎
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ecef9d48-cf2d-4f2d-8aa2-ccd1d9d48aa1/deploy-status)](https://app.netlify.com/sites/remindah/deploys)
 ![Remindah](https://img.shields.io/github/last-commit/MelodicCrypter/Remindah.svg?style=flat)
 ![Remindah](https://img.shields.io/github/contributors/MelodicCrypter/Remindah.svg?style=flat-square)
 
 Remindah is a cheatsheet for common:
-<br>
 
-- **Git** <br>
-- **Yarn** <br>
-- **NPM** <br>
-- **Composer** <br>
-- **Terminal** <br>
-- **PostgreSQL** <br>
-- **Rails** <br>
+- **Git**
+- **Yarn**
+- **NPM**
+- **Composer**
+- **Terminal**
+- **PostgreSQL**
+- **Rails**
 
 commands with some detailed information on what the command does. This repository will be updated constantly.
+
+---
+
+## Development Guide
+
+### Project Setup
+
+To run the application locally, you first have to install `gatsby-cli`:
+
+```sh
+npm i -g gatsby-cli
+```
+
+And inside the project directory, install the dependencies:
+
+```sh
+npm i
+```
+
+Start the local development server with the command below:
+
+```sh
+gatsby develop
+```
+
+### Adding Cheatsheets
+
+Cheatsheets are written in markdown files. All the cheatsheets should be stored within the `cheatsheets/` directory.
