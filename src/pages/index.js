@@ -11,11 +11,13 @@ const IndexPage = ({
   <Layout>
     <SEO title="Home" keywords={[`Remindah`, `cheatsheet`]} />
     {edges.map(edge => (
-      <div>
-        <Link to={edge.node.frontmatter.path}>
-          {edge.node.frontmatter.title}
-        </Link>
-      </div>
+      <ul>
+        <li>
+          <Link to={edge.node.frontmatter.path}>
+            {edge.node.frontmatter.title}
+          </Link>
+        </li>
+      </ul>
     ))}
   </Layout>
 );

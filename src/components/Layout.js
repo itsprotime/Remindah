@@ -1,8 +1,14 @@
+import { Global } from '@emotion/core';
+import styled from '@emotion/styled';
 import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Header from './Header';
-import './Layout.css';
+
+const Main = styled.main({
+  margin: '0 auto',
+  maxWidth: 960,
+});
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -17,17 +23,17 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
+        <Global
+          styles={{
+            body: {
+              margin: 0,
+              fontFamily:
+                '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+            },
           }}
-        >
-          <main>{children}</main>
-        </div>
+        />
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Main>{children}</Main>
       </>
     )}
   />
