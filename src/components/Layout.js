@@ -8,6 +8,7 @@ import Header from './Header';
 const Main = styled.main({
   margin: '0 auto',
   maxWidth: 960,
+  padding: '1.45rem 1.0875rem',
 });
 
 const Layout = ({ children }) => (
@@ -26,9 +27,10 @@ const Layout = ({ children }) => (
         <Global
           styles={{
             body: {
-              margin: 0,
+              color: 'rgba(0,0,0,.8)',
               fontFamily:
                 '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+              margin: 0,
             },
           }}
         />
