@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Markdown from '../components/Markdown';
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
@@ -9,7 +10,7 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Markdown dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 }
