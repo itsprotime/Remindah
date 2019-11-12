@@ -1,9 +1,7 @@
 const path = require('path');
 
-exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions;
-
-  const template = path.resolve('src/templates/CheatSheet.js');
+exports.createPages = async ({ actions: { createPage }, graphql }) => {
+  const CheatSheet = path.resolve('src/templates/CheatSheet.js');
 
   const result = await graphql(`
     {
@@ -26,7 +24,7 @@ exports.createPages = async ({ actions, graphql }) => {
   return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: template,
+      component: CheatSheet,
       context: {}, // additional data can be passed via context
     });
   });

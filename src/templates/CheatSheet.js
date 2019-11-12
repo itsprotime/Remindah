@@ -3,9 +3,8 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-export default function Template({ data }) {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+const CheatSheet = ({ data }) => {
+  const { markdownRemark: { frontmatter, html } } = data;
   return (
     <Layout>
       <SEO title={frontmatter.title} />
@@ -25,3 +24,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default CheatSheet;
